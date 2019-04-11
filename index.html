@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<style>
+svg {
+  font: 12px serif;
+}
+.years {
+  font-size: 14px;
+}
+.desc {
+  font-size: 16px;
+}
+.lines path {
+  fill: none;
+  stroke: #B233FF;
+  stroke-width: 2;
+  
+}
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 10px;
+  background: #B233FF;
+  color: white;
+  border-radius: 2px;
+}
+html, body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: auto;
+}
+
+#id, #chart {
+  /* background: #111; */
+  height: 100%;
+  width: 100%;
+  margin: auto;
+
+  /* cursor:url('http://s13.postimg.org/nziz57hab/cursor.png'), auto; */
+}
+</style>
+<html>
+    <head>
+      <title>CS 296 Visualization</title>
+  
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+      <!-- jQuery and lodash -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+      <script src="visualization.js"></script>
+
+  
+<body style="background-color: whitesmoke;">
+    <div id="container">
+      <h2 style="text-align:center;"><b>The Gender Ratio Shift at UIUC in the Past 14 Years</b></h2>
+      <h3 style="text-align:center;">By: <strong>Advai Podduturi</strong> and <strong>Aj Federici</strong></h3>
+      <br>
+      <p style="align: center; text-align:center; width: 33%; margin: auto;">The gender gap, that heavily plagued the early 2000s, is beginning to close. This visualization contains selected majors from four different colleges (Agricultural, Consumer, and Environmental Sciences, Business, Liberal Arts and Sciences, and Engineering) at the University of Illinois at Urbana-Champaign. 
+        <br><br>Hover over the ratio values to see the number of male and female students for that year as well as the name of the major. <br><br> 
+        Note: The M / F Ratios do not account for non-binary gendered students, so the total will not always be the sum of the male and female students. </p> 
+        <!-- Our d3.js visualization will appear in #chart -->
+        <div id="chart"></div>
+      </div>
+</body>
+</head>
+</html>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+<script src="d3.slopegraph.js"></script>
+
+<script>
